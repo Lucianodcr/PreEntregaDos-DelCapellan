@@ -11,6 +11,9 @@ var num3 = parseInt(entrada3);
 // Declaración de un objeto para almacenar los resultados de las operaciones
 var resultados = {};
 
+// Declaramos un array para almacenar los resultados
+var resultadosArray = [];
+
 // Función para sumar dos números
 function sumar(a, b) {
   return a + b;
@@ -47,9 +50,20 @@ resultados.concatenacion = concatenar(entrada1, entrada2);
 resultados.division = dividir(num3, num1);
 resultados.porcentaje = porcentaje(num2, 50);
 
+// Agregamos los resultados al array push()
+resultadosArray.push(resultados.suma);
+resultadosArray.push(resultados.resta);
+resultadosArray.push(resultados.concatenacion);
+resultadosArray.push(resultados.division);
+resultadosArray.push(resultados.porcentaje);
+
 // Mostramos los resultados mediante alert() o console.log()
 alert("El resultado de la suma es: " + resultados.suma);
 console.log("El resultado de la resta es: " + resultados.resta);
 alert("El resultado de la concatenación es: " + resultados.concatenacion);
 console.log("El resultado de la división es: " + resultados.division);
 alert("El resultado del porcentaje es: " + resultados.porcentaje);
+
+// Mostramos los resultados almacenados en el array mediante alert() o console.log()
+alert("Los resultados almacenados en el array son: " + resultadosArray);
+console.log("Los resultados almacenados en el array son: " + resultadosArray);
